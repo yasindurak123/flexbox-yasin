@@ -1,0 +1,175 @@
+          
+          body{
+               margin: 0;
+               padding: 0;
+               font-family: "noto sans", sans-serif;
+               background-color: #161616;
+          }
+          p{
+           color: #f9004d;    
+          }
+          nav{
+          color: #fff;
+          z-index: 99;
+          position: relative;
+          }
+          nav a body a{
+          color: #fff;
+          text-decoration: none;
+          }
+          nav .container-image{
+               max-width: 1150px;
+               padding: 1em 2em;
+               margin: 0 auto;
+          } /*Hjälper att placera bilden bättre i navbaren*/
+          nav .container-image>div{
+               display: grid;
+               grid-template-columns: 1fr 6fr;
+               align-items: center;
+          }
+
+          nav ul{
+               list-style-type: none;
+               padding: 0;
+               display: inline-block;
+          
+          }
+          nav ul li{
+          display: inline-block;
+          margin: 0 0.5em;   
+         padding: 0 55px;
+          }
+          nav ul a {
+          font-size: 0.8em;
+          text-decoration: none;
+          color: orange;
+          text-transform: uppercase;
+          }
+          nav :hover{
+          text-transform: uppercase;
+          color: red;
+
+          }
+          Nav form{
+          margin-right: 2em;
+          }
+          nav form input{
+          background: transparent;
+          color: #fff;
+          width: 12em;
+          padding: 0.5em 1em;
+          border: none;
+          outline: none;
+          }
+          nav form input::placeholder{
+               color: #fff;
+          }
+         
+
+          nav .container .menu-btn{
+               display: none;  /*gör det möjligt att ha backgrundsfärg*/
+          }
+          header{
+               height: 100vh;
+               background: black;
+               position: relative;
+               overflow: hidden;
+               color: #f9004d;
+          }
+          header::before{
+               content: '';
+               position: absolute;
+               top: 0;
+               right: -40em;
+               background: linear-gradient(45deg,#de1414,#f9094d); /*blandar bägge av färgerna till 1 singulär färg*/
+               width: 100%;
+               height: 120%;
+               transform: rotate(-69deg); /* roterar backgrunden*/
+               z-index: 0; 
+          }
+          header::after{
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               color: #f9004d;
+               font-size: 17em;
+               font-weight: 700;
+               z-index: 0;
+          }
+          .body{
+          display: grid;
+          justify-content: space-around; 
+          align-content: center;
+          grid-template-columns: 2fr 3fr;
+          grid-gap:2em;
+          height: 75%;
+          position: relative;
+          z-index: 1; /* body färgerna stannar bakom mina text*/
+          max-width: 1250px;
+          margin: 0 auto;
+          padding: 0 3em;
+          }
+          .body h1 {
+               font-size: 1.5em;
+               margin: 0.5em 0;
+          }
+          .body h4{
+          font-size: 1.5em;
+          margin: 0.5em 0;
+          }
+          /* det koden under gör så att texten ser finare ut*/
+          .body p{
+               letter-spacing: 1px;
+               line-height: 28px;
+               font-size: 18px;
+               margin: 2em 0 3em 0;
+               max-width: 45em;
+          }
+          /*hjälper att formulera knappen*/
+          .btn{
+           background: #f9004d;
+       color: white;
+       text-decoration: none;
+       border: 2px solid transparent;
+       font-weight: bold;
+       padding: 13px 30px;
+       border-radius: 30px;
+       transition: .4s; 
+          }
+
+          .btn:hover{
+          background: #6c0202; 
+          }
+          /*affectar bara den andra div class som är inuti div classen .body*/
+          .body> div:nth-child(2) {
+               display: flex;
+               justify-content: flex-end;
+               align-items: center;
+          }
+          .body .fas{
+               color: #fcc204;
+          }
+          .body img{
+               width: 45em;
+               filter: drop-shadow(30px 45px 40px #161616); /*lägger skuggan bakom skorn*/
+          animation: mover 2s alternate-reverse;   
+          
+          }
+          /* animationen för skorn*/
+          @keyframes mover {
+               0% { transform: translatex(0); }
+               100% { transform: translatex(500px); animation-duration: 1s; }
+          }
+          /*bilden går inte längre neråt*/
+          .footer{
+               max-width: 1250px;
+               margin: 0 auto;
+               padding: 0 3em;
+               position: relative;
+          }
+          .footer a{
+               margin: 0 0.4em;
+               font-size: 1.2;
+               text-decoration: none;
+          }
+          
